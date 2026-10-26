@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2026 Faculty Survey</title>
+<meta name="description" content="Information about the 2026 Faculty Survey: the study and the faculty advisory group.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="favicon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="topnav" aria-label="Site">
+  <div class="wrap">
+    <ul>
+      <li><a href="index.html" aria-current="page">Overview</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="masthead">
+  <div class="wrap">
+    <h1>2026 Faculty Survey</h1>
+    <p class="fielding">Fielding Fall and Winter 2026</p>
+    <dl class="details">
+      <dt>Principal Investigator:</dt>
+      <dd><a href="https://www.fire.org/about-us/our-team/nathan-honeycutt?category=1582">Nathan Honeycutt, Ph.D.</a></dd>
+      <dt>Contact:</dt>
+      <dd><a href="mailto:faculty.surveys@fire.org">faculty.surveys@fire.org</a></dd>
+    </dl>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section aria-labelledby="advisors-heading">
+    <h2 id="advisors-heading">Faculty Advisory Group</h2>
+    <p class="lede">We are tremendously grateful for constructive review and input from our Faculty Advisory Group:</p>
+
+    <!-- Advisory group image. To replace it, upload a new file to the images folder with the same name. -->
+    <a class="zoom" href="images/advisory_group.png" aria-label="Enlarge the Faculty Advisory Group image">
+      <img class="group-image" src="images/advisory_group.png" alt="Faculty Advisory Group: April Bleske-Rechek, Wisconsin, Psychology; Matt Burgess, Wyoming, Economics; Luke Conway, Grove City, Psychology; JP DeRuiter, Tufts, Computer Science; Diana Mutz, Penn, Political Science; Nadine Strossen, New York Law School; Jonathan Wai, Arkansas, Education; Regina Werum, Nebraska, Sociology; Sean Westwood, Dartmouth, Government; George Yancey, Baylor, Sociology; Steven Zhou, Claremont, Psychology; Jonathan Zimmerman, Penn, Education.">
+    </a>
+    <dialog class="lightbox" id="group-lightbox" aria-label="Faculty Advisory Group image, enlarged">
+      <button class="lightbox-close" type="button" aria-label="Close">&times;</button>
+      <div class="lightbox-inner">
+        <img src="images/advisory_group.png" alt="Faculty Advisory Group: April Bleske-Rechek, Wisconsin, Psychology; Matt Burgess, Wyoming, Economics; Luke Conway, Grove City, Psychology; JP DeRuiter, Tufts, Computer Science; Diana Mutz, Penn, Political Science; Nadine Strossen, New York Law School; Jonathan Wai, Arkansas, Education; Regina Werum, Nebraska, Sociology; Sean Westwood, Dartmouth, Government; George Yancey, Baylor, Sociology; Steven Zhou, Claremont, Psychology; Jonathan Zimmerman, Penn, Education.">
+      </div>
+    </dialog>
+
+    <p class="note">Ultimately the PI is responsible for all aspects of this survey, including question content, survey design, data analysis, and interpretation of results.</p>
+  </section>
+
+  <section aria-labelledby="about-heading">
+    <h2 id="about-heading">About the study</h2>
+    <p class="lede">The goal of this research study is to better understand faculty experiences on campus, particularly related to the topics of free speech and academic freedom, as well as their perspectives on key issues facing higher education. For this study faculty at over 400 U.S. colleges and universities are being contacted with an invitation to participate. The survey takes about 15 minutes to complete and will close in January 2027.</p>
+    <p>Please see <a href="faq.html">F.A.Q.</a> for answers to commonly asked questions.</p>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Page last updated October 26, 2026</p>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var link = document.querySelector('.zoom');
+    var box = document.getElementById('group-lightbox');
+    if (!link || !box || typeof box.showModal !== 'function') return; // falls back to opening the image itself
+    link.addEventListener('click', function (e) { e.preventDefault(); box.showModal(); });
+    box.querySelector('.lightbox-close').addEventListener('click', function () { box.close(); });
+    box.addEventListener('click', function (e) { if (e.target === box || e.target.classList.contains('lightbox-inner')) box.close(); });
+  })();
+</script>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "2f7d5386d03c4ee5ba203dc6de706278"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
